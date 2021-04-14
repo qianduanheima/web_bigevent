@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url('/assets/images/login_bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.logo {
+    margin: 20px 0 0 50px;
+}
+
+
+/* 注册登录大盒子 */
+
+.formBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+}
+
+
+/* 标题 */
+
+.formBox .title {
+    height: 60px;
+    background: url('/assets/images/login_title.png') no-repeat center;
+}
+
+
+/*  */
+
+.registeredForm {
+    display: none;
+}
+
+.formBox .layui-form {
+    padding: 0 40px;
+}
+
+.formBox .link {
+    text-align: right;
+}
+
+.formBox .layui-form-item {
+    position: relative;
+}
+
+.formBox .layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.formBox .layui-input {
+    padding-left: 33px;
+}
