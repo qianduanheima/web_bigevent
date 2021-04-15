@@ -28,6 +28,10 @@ $(function() {
             data: {},
             success: function(res) {
                 console.log(res);
+                if (res.status !== 0) {
+                    return layer.msg(res.message)
+                }
+
                 var username = res.data.username
                 var nickname = res.data.nickname
                 var email = res.data.email
@@ -47,7 +51,7 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                 if (res.status !== 0) {
-                    layer.msg(res.message)
+                    return layer.msg(res.message)
                 }
                 layer.msg('更新成功能')
                 receiveInformation()
