@@ -17,17 +17,10 @@
                  type: 'GET',
                  data: {},
                  success: function (res)  {
-                     console.log(res);
-                     if (res.status === 1 && res.message === '身份认证失败！') {
-                         // 1. 强制清空 token
-                         localStorage.removeItem('token')
-                             // 2. 强制跳转到登录页面
-                         location.href = '/login.html'
-                         return
-                     }
                      if (res.status !== 0) {
-                         return layer.msg('获取用户信息失败');
+                         return layer.msg('获取信息失败');
                      }
+
                      var username = res.data.nickname || res.data.username
                      $('.side-avatar i').html(username)
                      if (res.data.user_pic == null) {
