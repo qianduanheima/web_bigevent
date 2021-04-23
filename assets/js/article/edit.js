@@ -23,9 +23,11 @@ $(function() {
 
                 $('[name=cate_id]').html(str)
                 form.render()
+                editData()
             }
         })
         //获取文章数据并渲染到表单
+    function editData() {}
     $.ajax({
         method: 'GET',
         url: '/my/article/' + id,
